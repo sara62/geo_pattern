@@ -2,20 +2,20 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>GeoPattern by jasonlong</title>
+    <title>GeoPattern by sara62</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
   <body>
     <section class="page-header">
       <h1 class="project-name">GeoPattern</h1>
-      <h2 class="project-tagline">Create beautiful generative geometric background images from a string</h2>
-      <a href="https://github.com/jasonlong/geo_pattern" class="btn">View on GitHub</a>
-      <a href="https://github.com/jasonlong/geo_pattern/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/jasonlong/geo_pattern/tarball/master" class="btn">Download .tar.gz</a>
+      <h2 class="project-tagline">Create  generative geometric  images from a stri</h2>
+      <a href="https://github.com/sara62/geo_pattern" class="btn">View on GitHub</a>
+      <a href="https://github.com/sara62/geo_pattern/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/sara62/geo_pattern/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
@@ -60,37 +60,37 @@ Javascript port.</p>
 
 <p>Make a new pattern:</p>
 
-<div class="highlight highlight-ruby"><pre>pattern <span class="pl-k">=</span> <span class="pl-c1">GeoPattern</span>.generate(<span class="pl-s"><span class="pl-pds">'</span>Mastering Markdown<span class="pl-pds">'</span></span>)</pre></div>
+<div class="highlight highlight-source-ruby"><pre>pattern <span class="pl-k">=</span> <span class="pl-c1">GeoPattern</span>.generate(<span class="pl-s"><span class="pl-pds">'</span>Mastering Markdown<span class="pl-pds">'</span></span>)</pre></div>
 
 <p>To specify a base background color (with a hue and saturation that adjusts depending on the string):</p>
 
-<div class="highlight highlight-ruby"><pre>pattern <span class="pl-k">=</span> <span class="pl-c1">GeoPattern</span>.generate(<span class="pl-s"><span class="pl-pds">'</span>Mastering Markdown<span class="pl-pds">'</span></span>, <span class="pl-c1">base_color:</span> <span class="pl-s"><span class="pl-pds">'</span>#fc0<span class="pl-pds">'</span></span>)</pre></div>
+<div class="highlight highlight-source-ruby"><pre>pattern <span class="pl-k">=</span> <span class="pl-c1">GeoPattern</span>.generate(<span class="pl-s"><span class="pl-pds">'</span>Mastering Markdown<span class="pl-pds">'</span></span>, <span class="pl-c1">base_color:</span> <span class="pl-s"><span class="pl-pds">'</span>#fc0<span class="pl-pds">'</span></span>)</pre></div>
 
 <p>To use a specific background color (w/o any hue or saturation adjustments):</p>
 
-<div class="highlight highlight-ruby"><pre>pattern <span class="pl-k">=</span> <span class="pl-c1">GeoPattern</span>.generate(<span class="pl-s"><span class="pl-pds">'</span>Mastering Markdown<span class="pl-pds">'</span></span>, <span class="pl-c1">color:</span> <span class="pl-s"><span class="pl-pds">'</span>#fc0<span class="pl-pds">'</span></span>)</pre></div>
+<div class="highlight highlight-source-ruby"><pre>pattern <span class="pl-k">=</span> <span class="pl-c1">GeoPattern</span>.generate(<span class="pl-s"><span class="pl-pds">'</span>Mastering Markdown<span class="pl-pds">'</span></span>, <span class="pl-c1">color:</span> <span class="pl-s"><span class="pl-pds">'</span>#fc0<span class="pl-pds">'</span></span>)</pre></div>
 
 <p>To use a specific <a href="#available-patterns">pattern generator</a>:</p>
 
-<div class="highlight highlight-ruby"><pre>pattern <span class="pl-k">=</span> <span class="pl-c1">GeoPattern</span>.generate(<span class="pl-s"><span class="pl-pds">'</span>Mastering Markdown<span class="pl-pds">'</span></span>, <span class="pl-c1">patterns:</span> <span class="pl-c1">:sine_waves</span>)</pre></div>
+<div class="highlight highlight-source-ruby"><pre>pattern <span class="pl-k">=</span> <span class="pl-c1">GeoPattern</span>.generate(<span class="pl-s"><span class="pl-pds">'</span>Mastering Markdown<span class="pl-pds">'</span></span>, <span class="pl-c1">patterns:</span> <span class="pl-c1">:sine_waves</span>)</pre></div>
 
 <p>To use a subset of the <a href="#available-patterns">available patterns</a>:</p>
 
-<div class="highlight highlight-ruby"><pre>pattern <span class="pl-k">=</span> <span class="pl-c1">GeoPattern</span>.generate(<span class="pl-s"><span class="pl-pds">'</span>Mastering Markdown<span class="pl-pds">'</span></span>, <span class="pl-c1">patterns:</span> [<span class="pl-c1">:sine_waves</span>, <span class="pl-c1">:xes</span>])</pre></div>
+<div class="highlight highlight-source-ruby"><pre>pattern <span class="pl-k">=</span> <span class="pl-c1">GeoPattern</span>.generate(<span class="pl-s"><span class="pl-pds">'</span>Mastering Markdown<span class="pl-pds">'</span></span>, <span class="pl-c1">patterns:</span> [<span class="pl-c1">:sine_waves</span>, <span class="pl-c1">:xes</span>])</pre></div>
 
 <p>Get the SVG string:</p>
 
-<div class="highlight highlight-ruby"><pre>puts pattern.to_svg
+<div class="highlight highlight-source-ruby"><pre>puts pattern.to_svg
 <span class="pl-c"># =&gt; &lt;svg xmlns="http://www.w3.org/2000/svg" ...</span></pre></div>
 
 <p>Get the Base64 encoded string:</p>
 
-<div class="highlight highlight-ruby"><pre>puts pattern.to_base64
+<div class="highlight highlight-source-ruby"><pre>puts pattern.to_base64
 <span class="pl-c"># =&gt; PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC...</span></pre></div>
 
 <p>You can then use this string to set the background:</p>
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">"</span>background-image: &lt;%= pattern.to_data_uri %&gt;<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">style</span>=<span class="pl-s"><span class="pl-pds">"</span>background-image: &lt;%= pattern.to_data_uri %&gt;<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
 <h2>
 <a id="available-patterns" class="anchor" href="#available-patterns" aria-hidden="true"><span class="octicon octicon-link"></span></a>Available patterns</h2>
@@ -189,7 +189,7 @@ are deprecated in favor of symbol references (e.g. <code>:overlapping_circles</c
 <p>If you want to get some more information about a pattern, please use the
 following methods.</p>
 
-<div class="highlight highlight-ruby"><pre>pattern <span class="pl-k">=</span> <span class="pl-c1">GeoPattern</span>.generate(<span class="pl-s"><span class="pl-pds">'</span>Mastering Markdown<span class="pl-pds">'</span></span>, <span class="pl-c1">patterns:</span> [<span class="pl-c1">:sine_waves</span>, <span class="pl-c1">:xes</span>])
+<div class="highlight highlight-source-ruby"><pre>pattern <span class="pl-k">=</span> <span class="pl-c1">GeoPattern</span>.generate(<span class="pl-s"><span class="pl-pds">'</span>Mastering Markdown<span class="pl-pds">'</span></span>, <span class="pl-c1">patterns:</span> [<span class="pl-c1">:sine_waves</span>, <span class="pl-c1">:xes</span>])
 
 <span class="pl-c"># The color of the background in html notation</span>
 pattern.background.color.to_html
@@ -207,7 +207,7 @@ pattern.background.generator</pre></div>
 
 <p>To get more information about the structure of the pattern, please use the following methods:</p>
 
-<div class="highlight highlight-ruby"><pre>pattern <span class="pl-k">=</span> <span class="pl-c1">GeoPattern</span>.generate(<span class="pl-s"><span class="pl-pds">'</span>Mastering Markdown<span class="pl-pds">'</span></span>, <span class="pl-c1">patterns:</span> [<span class="pl-c1">:sine_waves</span>, <span class="pl-c1">:xes</span>])
+<div class="highlight highlight-source-ruby"><pre>pattern <span class="pl-k">=</span> <span class="pl-c1">GeoPattern</span>.generate(<span class="pl-s"><span class="pl-pds">'</span>Mastering Markdown<span class="pl-pds">'</span></span>, <span class="pl-c1">patterns:</span> [<span class="pl-c1">:sine_waves</span>, <span class="pl-c1">:xes</span>])
 
 <span class="pl-c"># The name of the structure</span>
 pattern.structure.name
@@ -218,7 +218,7 @@ pattern.structure.generator</pre></div>
 <h2>
 <a id="rake-support" class="anchor" href="#rake-support" aria-hidden="true"><span class="octicon octicon-link"></span></a>Rake Support</h2>
 
-<div class="highlight highlight-ruby"><pre>string <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>Mastering markdown<span class="pl-pds">'</span></span>
+<div class="highlight highlight-source-ruby"><pre>string <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>Mastering markdown<span class="pl-pds">'</span></span>
 
 <span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">'</span>geo_pattern/geo_pattern_task<span class="pl-pds">'</span></span>
 
@@ -237,12 +237,12 @@ pattern.structure.generator</pre></div>
 <h3>
 <a id="generate-fixtures" class="anchor" href="#generate-fixtures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Generate Fixtures</h3>
 
-<div class="highlight highlight-ruby"><pre>rake <span class="pl-c1">fixtures:</span>generate</pre></div>
+<div class="highlight highlight-source-ruby"><pre>rake <span class="pl-c1">fixtures:</span>generate</pre></div>
 
 <h3>
 <a id="run-tests" class="anchor" href="#run-tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Run tests</h3>
 
-<div class="highlight highlight-ruby"><pre>rake test</pre></div>
+<div class="highlight highlight-source-ruby"><pre>rake test</pre></div>
 
 <h2>
 <a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
@@ -261,7 +261,7 @@ pattern.structure.generator</pre></div>
 <p>Prefix rspec-commandline with <code>RSPEC_PROFILE=1</code> to output the ten slowest
 examples of the test suite.</p>
 
-<div class="highlight highlight-bash"><pre>RSPEC_PROFILE=1 bundle <span class="pl-c1">exec</span> rspec</pre></div>
+<div class="highlight highlight-source-shell"><pre>RSPEC_PROFILE=1 bundle <span class="pl-c1">exec</span> rspec</pre></div>
 
 <h2>
 <a id="ports--related-projects" class="anchor" href="#ports--related-projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Ports &amp; related projects</h2>
@@ -285,7 +285,7 @@ examples of the test suite.</p>
 <a href="https://github.com/fedux-org/middleman-geo_pattern">https://github.com/fedux-org/middleman-geo_pattern</a></p>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/jasonlong/geo_pattern">GeoPattern</a> is maintained by <a href="https://github.com/jasonlong">jasonlong</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/sara62/geo_pattern">GeoPattern</a> is maintained by <a href="https://github.com/sara62">sara62</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
@@ -295,4 +295,3 @@ examples of the test suite.</p>
   
   </body>
 </html>
-
